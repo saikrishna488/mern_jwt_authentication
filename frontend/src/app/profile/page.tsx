@@ -17,7 +17,7 @@ const page = () => {
     if (name && email && password) {
       if (password.length > 5) {
         try {
-          let res = await axios.put("http://localhost:8000/api/users/profile", {
+          let res = await axios.put("https://mern-jwt-authentication-backend.vercel.app/api/users/profile", {
             _id: data._id,
             name, email, password
           });

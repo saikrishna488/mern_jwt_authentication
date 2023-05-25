@@ -12,7 +12,7 @@ const GetData = () => {
   useEffect(() => {
     const getData = async (token) => {
       try {
-        let res = await axios.get('http://localhost:8000/api/users/profile/' + token);
+        let res = await axios.get('https://mern-jwt-authentication-backend.vercel.app/api/users/profile/' + token);
         let oriData = {
           _id: res.data._id,
           name: res.data.name,

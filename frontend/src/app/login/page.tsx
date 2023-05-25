@@ -24,7 +24,7 @@ const page = () => {
             }
             else {
                 try {
-                    let res = await axios.post(https://mern-jwt-authentication-backend.vercel.app/api/users/auth', {
+                    let res = await axios.post('https://mern-jwt-authentication-backend.vercel.app/api/users/auth', {
                         email, password
                     });
                     newData(res.data);

@@ -1,15 +1,11 @@
 module.exports = {
-    webpack: (config, { isServer }) => {
-      if (!isServer) {
-        config.resolve.fallback = {
-          ...config.resolve.fallback,
-          fs: false,
-          net: false,
-          tls: false,
-        };
-      }
+    webpack: (config) => {
+      config.module.rules.push({
+        test: /follow-redirects/,
+        use: 'null-loader',
+      });
+  
       return config;
     },
-    poweredByHeader: false, // Optional: If you want to disable the "X-Powered-By" header.
   };
   

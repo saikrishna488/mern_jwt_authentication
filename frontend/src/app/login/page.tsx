@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 
 const page = () => {
     const [_cookie, setCookie] = useCookies();
-    const { data, newData } = GlobalStates();
+    const { data, newData } : (any) = GlobalStates() || undefined;
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const router = useRouter();
@@ -48,14 +48,14 @@ const page = () => {
         }
     }
     useEffect(() => {
-        if (!data._id) {
+        if (data._id != null) {
             toast("Logout To login again");
             router.push('/');
         }
         
     }, []);
 
-    if (!data._id) {
+    if (data._id == null) {
         return (
             <>
                 <section className="bg-gray-50 dark:bg-gray-900 h-screen overflow-hidden">

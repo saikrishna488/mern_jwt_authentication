@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
     {
-      data._id == null ? <GetData/> : null
+      data._id == null ? <GetData/> : console.log("not loaded")
     }
     
       <Header />

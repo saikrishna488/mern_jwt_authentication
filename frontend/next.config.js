@@ -1,11 +1,4 @@
-module.exports = {
-    webpack: (config) => {
-      config.module.rules.push({
-        test: /follow-redirects/,
-        use: 'null-loader',
-      });
-  
-      return config;
-    },
-  };
-  
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
+
+module.exports = nextConfig

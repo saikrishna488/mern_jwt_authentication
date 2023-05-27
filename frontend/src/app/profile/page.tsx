@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -12,7 +13,7 @@ const page = () => {
   const [name, setName] = useState(data.name || "");
   const router = useRouter();
 
-  const submit = async (e) => {
+  const submit = async (e:any) => {
     e.preventDefault();
     if (name && email && password) {
       if (password.length > 5) {

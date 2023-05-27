@@ -19,7 +19,7 @@ const GetData = () => {
           email: res.data.email
         }
         newData(oriData);
-      } catch (err) {
+      } catch (err : any) {
         console.log(err.response.data.message);
       }
     };

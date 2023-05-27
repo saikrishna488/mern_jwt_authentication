@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import Header from "../../components/Header"
 import Link from "next/link"
@@ -13,7 +14,7 @@ const page = () => {
   const [name, setName] = useState('');
   const router = useRouter();
 
-  const submit = async (e) => {
+  const submit = async (e:any) => {
     e.preventDefault();
     if (email && password && name) {
       if (password.length > 5) {
@@ -27,7 +28,7 @@ const page = () => {
             router.push('/login');
           }
         }
-        catch(err){
+        catch(err:any){
           toast(err.response.data.message);
         }
       }

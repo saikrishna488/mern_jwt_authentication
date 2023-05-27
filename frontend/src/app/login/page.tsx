@@ -33,7 +33,6 @@ const page = () => {
                         maxAge: 30 * 24 * 60 * 60 * 1000,
                         sameSite: true,
                     });
-                    console.log(res.data.token);
                     toast("Login successful");
                     router.push('/');
                 }
@@ -49,10 +48,11 @@ const page = () => {
         }
     }
     useEffect(() => {
-        if (data._id) {
-            // toast("Logout To login again");
-            // router.push('/');
+        if (!data._id) {
+            toast("Logout To login again");
+            router.push('/');
         }
+        
     }, []);
 
     if (!data._id) {

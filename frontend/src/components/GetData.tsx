@@ -26,7 +26,6 @@ const GetData = () => {
 
     if (token && token.length > 0) {
       getData(token);
-    console.log('ji')
     }
   }, [token, newData]);
 

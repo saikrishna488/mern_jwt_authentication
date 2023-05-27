@@ -10,7 +10,7 @@ const GetData = () => {
   const { newData } = GlobalStates();
 
   useEffect(() => {
-    const getData = async (token) => {
+    const getData = async (token:string) => {
       try {
         let res = await axios.get('https://mern-jwt-authentication-backend.vercel.app/api/users/profile/' + token);
         let oriData = {

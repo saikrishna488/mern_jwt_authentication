@@ -7,9 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors:{
-        namiSwan : "orange"
-      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

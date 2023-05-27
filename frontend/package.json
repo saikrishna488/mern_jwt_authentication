@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prebuild": "rm -rf .next",
+    "build": "next build",
+    "postbuild": "rm -rf .next/server/chunks/*follow-redirects*",
     "dev": "next dev",
-    "build": "next build --ignore-during-build 'follow-redirects'",
     "start": "next start"
   },
   "dependencies": {
